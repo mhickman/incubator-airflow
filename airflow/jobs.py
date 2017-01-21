@@ -919,7 +919,7 @@ class SchedulerJob(BaseJob):
                                          task_instance.execution_date,
                                          dag_runs))
 
-            dag_is_running = True
+            dag_is_running = False
             for dag_run in dag_runs:
                 if dag_run.state == State.RUNNING:
                     dag_is_running = True
